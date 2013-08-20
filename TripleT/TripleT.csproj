@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C743A3A8-E7B9-47C3-BA5B-736E88B56749}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TripleT</RootNamespace>
+    <AssemblyName>TripleT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="libdb_dotnet53, Version=5.3.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\libdb_dotnet53.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\AtomCollapse.cs" />
+    <Compile Include="Algorithms\BindingComparer.cs" />
+    <Compile Include="Algorithms\BindingSetComparer.cs" />
+    <Compile Include="Algorithms\ByteArrayComparer.cs" />
+    <Compile Include="Algorithms\ByteArrayEqualityComparer.cs" />
+    <Compile Include="Algorithms\ExternalSort.cs" />
+    <Compile Include="Algorithms\NComparer.cs" />
+    <Compile Include="Algorithms\PlanGenerator.cs" />
+    <Compile Include="Algorithms\Rules\DecisionEngine.cs" />
+    <Compile Include="Algorithms\Rules\Joins\LiteralPrioritizer.cs" />
+    <Compile Include="Algorithms\Rules\Joins\MergeJoinPrioritizer.cs" />
+    <Compile Include="Algorithms\Rules\Joins\PatternPrioritizer.cs" />
+    <Compile Include="Algorithms\Rules\Joins\PositionalPrioritizer.cs" />
+    <Compile Include="Algorithms\Rules\Joins\RandomPicker.cs" />
+    <Compile Include="Algorithms\Rules\Joins\Rule.cs" />
+    <Compile Include="Algorithms\Rules\Joins\StatisticalPrioritizer.cs" />
+    <Compile Include="Algorithms\Rules\Seeds\PositionalPrioritizer.cs" />
+    <Compile Include="Algorithms\Rules\Seeds\RandomPicker.cs" />
+    <Compile Include="Algorithms\Rules\Seeds\Rule.cs" />
+    <Compile Include="Algorithms\Rules\Seeds\StatisticalPrioritizer.cs" />
+    <Compile Include="Algorithms\TripleComparer.cs" />
+    <Compile Include="Compatibility\Notation3TripleReader.cs" />
+    <Compile Include="Compatibility\NTripleReader.cs" />
+    <Compile Include="Compatibility\SplitlineTripleReader.cs" />
+    <Compile Include="Compatibility\TripleReader.cs" />
+    <Compile Include="Compatibility\XmlTripleReader.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Datastructures\Atom.cs" />
+    <Compile Include="Datastructures\AtomCollapse\Edge.cs" />
+    <Compile Include="Datastructures\AtomCollapse\EdgeLabel.cs" />
+    <Compile Include="Datastructures\AtomCollapse\Graph.cs" />
+    <Compile Include="Datastructures\AtomCollapse\Node.cs" />
+    <Compile Include="Datastructures\AtomDictionary.cs" />
+    <Compile Include="Datastructures\Binding.cs" />
+    <Compile Include="Datastructures\BindingFilter.cs" />
+    <Compile Include="Datastructures\BindingSet.cs" />
+    <Compile Include="Datastructures\Bucket.cs" />
+    <Compile Include="Datastructures\Index.cs" />
+    <Compile Include="Datastructures\IndexPayload.cs" />
+    <Compile Include="Datastructures\JoinGraph\Edge.cs" />
+    <Compile Include="Datastructures\JoinGraph\Graph.cs" />
+    <Compile Include="Datastructures\JoinGraph\Node.cs" />
+    <Compile Include="Datastructures\Queries\HashJoin.cs" />
+    <Compile Include="Datastructures\Queries\MergeJoin.cs" />
+    <Compile Include="Datastructures\Queries\Operator.cs" />
+    <Compile Include="Datastructures\Queries\Pattern.cs" />
+    <Compile Include="Datastructures\Queries\QueryPlan.cs" />
+    <Compile Include="Datastructures\Queries\Scan.cs" />
+    <Compile Include="Datastructures\Queries\Sort.cs" />
+    <Compile Include="Datastructures\QueryExpressions\And.cs" />
+    <Compile Include="Datastructures\QueryExpressions\Compare.cs" />
+    <Compile Include="Datastructures\QueryExpressions\CompareOption.cs" />
+    <Compile Include="Datastructures\QueryExpressions\Expression.cs" />
+    <Compile Include="Datastructures\QueryExpressions\Or.cs" />
+    <Compile Include="Datastructures\SortOrder.cs" />
+    <Compile Include="Datastructures\Statistics.cs" />
+    <Compile Include="Datastructures\Triple.cs" />
+    <Compile Include="Datastructures\TripleItem.cs" />
+    <Compile Include="Datastructures\TriplePosition.cs" />
+    <Compile Include="Datastructures\Variable.cs" />
+    <Compile Include="IO\BindingBuffer.cs" />
+    <Compile Include="IO\BindingSerializer.cs" />
+    <Compile Include="IO\NBuffer.cs" />
+    <Compile Include="IO\NPage.cs" />
+    <Compile Include="IO\Operators\Filter.cs" />
+    <Compile Include="IO\Operators\HashJoin.cs" />
+    <Compile Include="IO\Operators\MergeJoin.cs" />
+    <Compile Include="IO\Operators\Operator.cs" />
+    <Compile Include="IO\Operators\Scan.cs" />
+    <Compile Include="IO\Operators\Sort.cs" />
+    <Compile Include="IO\TripleBuffer.cs" />
+    <Compile Include="IO\TripleCursor.cs" />
+    <Compile Include="IO\TriplePage.cs" />
+    <Compile Include="IO\TripleSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\CSVWriter.cs" />
+    <Compile Include="Reporting\TikzWriter.cs" />
+    <Compile Include="Test\BatchTester.cs" />
+    <Compile Include="Test\ProcessMonitor.cs" />
+    <Compile Include="Test\QuerySets\DbPedia.cs" />
+    <Compile Include="Test\QuerySets\Sp2Bench.cs" />
+    <Compile Include="Test\QuerySets\Uniprot.cs" />
+    <Compile Include="Util\Encoding.cs" />
+    <Compile Include="Util\Generator.cs" />
+    <Compile Include="Util\ListExtensions.cs" />
+    <Compile Include="Util\Logger.cs" />
+    <Compile Include="Util\OperatorExtensions.cs" />
+    <Compile Include="Util\PatternExtensions.cs" />
+    <Compile Include="Util\TripleExtensions.cs" />
+    <Compile Include="Util\TupleExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\libdb_dotnet53.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

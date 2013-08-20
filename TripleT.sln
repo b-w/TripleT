@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleT", "TripleT\TripleT.csproj", "{C743A3A8-E7B9-47C3-BA5B-736E88B56749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleT.Examples", "TripleT.Examples\TripleT.Examples.csproj", "{5559AEE7-54B3-4292-B425-C5F1A09AE428}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C743A3A8-E7B9-47C3-BA5B-736E88B56749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C743A3A8-E7B9-47C3-BA5B-736E88B56749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C743A3A8-E7B9-47C3-BA5B-736E88B56749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C743A3A8-E7B9-47C3-BA5B-736E88B56749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5559AEE7-54B3-4292-B425-C5F1A09AE428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5559AEE7-54B3-4292-B425-C5F1A09AE428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5559AEE7-54B3-4292-B425-C5F1A09AE428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5559AEE7-54B3-4292-B425-C5F1A09AE428}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
